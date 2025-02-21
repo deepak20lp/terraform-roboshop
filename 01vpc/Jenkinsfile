@@ -12,7 +12,8 @@ pipeline {
         }
         stage('plan') {
             steps {
-                echo 'Testing..'
+                echo 'planning'
+                sh 'terraform plan' 
             }
         }
         stage('Deploy') {
