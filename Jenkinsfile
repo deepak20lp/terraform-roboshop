@@ -8,7 +8,7 @@ pipeline {
                 sh '''
                    pwd
                    ls -ltr
-                   echo 'Building..'
+                   echo 'web hook event...'
                 '''
             }
         }
