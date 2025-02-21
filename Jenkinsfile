@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "built-in"}
+    agent { label "AGENT-1"}
 
     stages {
         stage('Build') {
@@ -22,7 +22,7 @@ pipeline {
         always { 
             echo 'I will always run whether the job is success or failure'
         }
-        sucess {
+        success {
             echo "I,will run only when the job is success"
         }
         failure{
