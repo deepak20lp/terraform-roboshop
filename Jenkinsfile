@@ -5,12 +5,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh '''
+                   pwd
+                   ls -ltr
+                   echo 'Building..'
+                '''
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                error 'this is failed'
             }
         }
         stage('Deploy') {
