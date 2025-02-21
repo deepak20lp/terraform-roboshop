@@ -13,6 +13,7 @@ pipeline {
         stage('plan') {
             steps {
                 sh 'cd 01vpc'
+                sh 'ls -ltr'
                 echo 'planning'
                 sh 'terraform plan' 
             }
