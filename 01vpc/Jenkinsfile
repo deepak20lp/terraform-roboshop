@@ -13,12 +13,13 @@ pipeline {
         }
         stage('plan') {
             steps {
-                sh 'pwd'
-                sh 'cd 01vpc'
-                sh 'pwd'
-                sh 'ls -ltr'
-                echo 'planning'
-                sh 'terraform plan' 
+                sh '''
+                pwd
+                cd 01vpc
+                pwd
+                ls -ltr
+                terraform plan
+                ''' 
             }
         }
         stage('Deploy') {
