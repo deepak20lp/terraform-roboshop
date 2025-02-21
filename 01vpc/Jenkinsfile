@@ -5,6 +5,7 @@ pipeline {
         stage('init') {
             steps {
                 sh '''
+                    pwd
                     cd 01vpc
                     terraform init
                 '''
@@ -12,7 +13,9 @@ pipeline {
         }
         stage('plan') {
             steps {
+                sh 'pwd'
                 sh 'cd 01vpc'
+                sh 'pwd'
                 sh 'ls -ltr'
                 echo 'planning'
                 sh 'terraform plan' 
