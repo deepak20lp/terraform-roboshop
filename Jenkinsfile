@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "AGENT-1"}
+    agent { node {label "AGENT-1"}}
 
     stages {
         stage('Build') {
@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                error
             }
         }
         stage('Deploy') {
