@@ -10,6 +10,7 @@ pipeline {
                    ls -ltr
                    echo 'web hook event...'
                    cd 01vpc
+                   ls -ltr
                 '''
             }
         }
