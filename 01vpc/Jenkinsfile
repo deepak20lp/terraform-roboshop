@@ -32,7 +32,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh '''
+                cd 01vpc
+                terraform apply -auto-approve
+                '''
             }
         }
     }
