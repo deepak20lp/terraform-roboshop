@@ -9,7 +9,7 @@ pipeline {
                    pwd
                    ls -ltr
                    echo 'web hook event...'
-                   cd 01vpn
+                   cd 01vpc
                 '''
             }
         }
