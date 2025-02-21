@@ -1,5 +1,8 @@
 pipeline {
     agent {node {label "AGENT-1"}}
+    options {
+        ansiColor('xterm')  // Enables ANSI colors in Jenkins output
+    }
 
     stages {
         stage('init') {
@@ -20,6 +23,11 @@ pipeline {
                 ls -ltr
                 terraform plan
                 ''' 
+            }
+        }
+        stage('approval') {
+            steps{
+                input 'Shall I apply?'
             }
         }
         stage('Deploy') {
